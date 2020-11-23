@@ -1,0 +1,68 @@
+java script
+
+aula1 usando vs code
+esse script é uma mensagem que aparece na tela antes de carregar a página, usado no proprio html
+
+<script> 
+    window.alert('Minha primeira mensagem')
+    window.confirm('vc é +18?')
+    window.prompt('qual é seu nome?')
+</script>
+
+aula2 usando node.js
+
+para aderir valores a variavel é o codigo
+var # = #
+varialveis sempre  começam com letra, $, _pode ter simbolos e n pode conter espaço e palavras já utilizadas na linguagem, letras maiusculas fazer diferença
+qual quer numero conta como numero
+str pode usar "", '', ``
+
+aula 3 usando vs code
+
+se n converter a variavel sempre vai ser str usando o prompt
+
+para comverter str em numero se usa
+Number.parseInt(#) para numeros inteiros
+Number.parseFloat(#) para numeros decimais
+
+pode se usar somente number e a linguagem se vira
+Number(#)
+
+para converter numero em str usa-se
+String(#)
+#.toString()
+
+para colocar variaveis em uma frase usa-se `${#}` (tem q usar crase)
+
+#.length informa quantos caracteres tem uma str
+#.toUpperCase() tranforma a str em letras maiusculas
+#.toLowerCase() tranforma a str em letrs minusculas
+
+para o java colocar no proprio html usa-se
+document.write(#) (esse já funciona com quebra de linha no prompt)
+com quebra de linha
+document.writeIn (n funcionou no prompt)
+
+tags html tb funcionan no js por exemplo
+`<h1>kkk</h1>`
+
+para mostrar quantas casa decimais dps do ponto flutuante usa-se
+#.toFixed(#)
+para usar , ao invez de . usa-se
+#.toFixed(#).replace('.', ',')
+para usar reais usa-se
+#.toLocaleString('pt-BR',{style:'currency',currency:'BRl'})
+
+ordem de precedencia
+(); **; *,/,%;+,-
+
+se um variavel recebe ela msm com uma conta pode se usar 
++=
+-=
+*=
+/=
+**=
+%=
+para simplificar variavel +=1 ou -=1
+++
+--
