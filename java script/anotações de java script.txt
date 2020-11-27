@@ -66,3 +66,40 @@ se um variavel recebe ela msm com uma conta pode se usar
 para simplificar variavel +=1 ou -=1
 ++
 --
+
+aula 8 relacionais 
+<,>,>=,<=,==,!=
+tem valores em boleano
+os relacionais n relacionam tipo de tipo primitivo
+5=='5'==true
+ai usa relacionais de identidade com '==='
+5==='5'==false
+>==,<==,===,!==
+
+operadoeres logicos 
+! = negação
+só tem resultado em true ou false
+&& = cojunção
+|| = disjunção
+
+ordem de precedencia
+(),**,/
+<,>,>=
+!,%%,||
+
+ternario ?,:
+#?true:false
+
+dom
+dom só funciona no navegador
+pode selecionar ele mentos do cocumento por marca
+getElementsByTagName()
+por id
+getElementBYid()
+por nome 
+getElementsByName()
+por classe
+getElementByClassName()
+pro seletor
+querySelector()
+querySelectorAll()
