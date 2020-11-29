@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test 8 de js</title>
+    <style>
+        body {background-color: black; color: green;} div#catapimba {background-color: #0a0a33; text-align: center; padding: 0px; margin: auto; width: 200px; height: 100px; }
+    </style>
+</head>
+<body>
+    <div id="catapimba"><!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"-->
+        <h1>catapimba 8</h1>
+    </div>
+    <script>
+        // escolhi usar seleção por id
+        var a = window.document.getElementById('catapimba')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        // essa função para quando clicar na area
+        function clicar() {
+            a.innerText = 'daora'
+            a.style.background = 'white'
+            a.style.color = 'black'
+        }
+        //essa função para quando o muse passar pela area
+        function entrar() {
+            a.innerText = 'loko'
+        }
+        // essa função para quando o mouse sair da area
+        function sair() {
+            a.innerText = 'saiu'
+            a.style.background = '#0a0a33'
+            a.style.color = 'green'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando</title>
+    <style>
+        body {background-color: #00002e; color: #4f2679; font-size: 20px;} input {font: normal 18 Arial; width: 100px;} div {margin: auto; padding-left: 50px;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>catapimba 9</h1>
+        <p>calculadora</p>
+        <input type="number" name="txt" id="txt"> 
+        <input type="number" name="txt2" id="txt2"> 
+        <input type="button" value="somar" id="somar" onclick="somar()">
+        <div id="t">resultado</div>
+    </div>
+    <script>
+        function somar() {
+            var n = window.document.getElementById('txt')
+            var n2 = window.document.getElementById('txt2')
+            var t = window.document.getElementById('t')
+            var n = Number(n.value)
+            var n2 = Number(n2.value)
+            var s = n+n2
+            t.innerHTML = `A soma entre ${n} e ${n2} é igual a <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>
