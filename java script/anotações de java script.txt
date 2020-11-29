@@ -103,3 +103,16 @@ getElementByClassName()
 pro seletor
 querySelector()
 querySelectorAll()
+
+aula 8
+o evento do dom com o mouse
+mouseenter -- se o mouse estiver encima da area marcada
+mousemove -- se o mouse estiver se mexendo encima da area marcada
+mousedown -- se o mouse estiver 'segurando' a area marcada
+mouseup -- se o mouse soltar dps de 'segurar' a area marcada
+click -- click na area marcada
+mouseout -- se estiver fora da area marcada
+funções só em uma situação 
+function ação(param){
+	bloco de codigo
+}
