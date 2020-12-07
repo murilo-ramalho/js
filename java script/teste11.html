@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catapimba 12</title>
+    <style>
+        body {background-color: black; color: rgb(12, 12, 12);} .p {background-color: rgb(32, 65, 94); margin: auto; padding: 30px; height: 300px; width: 400px; font-size: 20px; text-align: center; font-family: Arial, Helvetica, sans-serif;}
+    </style>
+</head>
+<body>
+    <div class="p">
+        <h1>digite sua idade</h1>
+        <input type="number" class="idade">
+        <input type="button" value="mostra" onclick="mostrar()">
+        <div class="r"><p>aki aparece o resultado</p></div>
+    </div>
+    <script>
+        function mostrar() {
+            var i = document.querySelector('input.idade')
+            var m = document.querySelector('div.r')
+            var print = Number(i.value)
+            if (print<18) {
+                m.innerHTML = `<p>sua idade é <strong>${print}</strong>, você não pode dirigir</p>`
+            } else {
+                m.innerHTML = `<p>sua idade é <strong>${print}</strong>, você pode digirir<p>`
+                m.innerHTML += `<p>dirija com segurança ;D</p>`
+            }
+        }
+    </script>
+</body>
+</html>
