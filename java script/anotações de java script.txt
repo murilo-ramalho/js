@@ -116,3 +116,20 @@ funções só em uma situação
 function ação(param){
 	bloco de codigo
 }
+aula 11
+quando for o js puro é console.log() para ostrar na tela
+condições
+funcionam parecido com o python 
+
+if (#) {
+
+} else {
+
+}
+(# é id, . é class)
+para add mais um paragrafo precisa estar dentro de uma tag ex:
+m.innerHTML = `<p>sua idade é <strong>${print}</strong>, você pode digirir<p>`
+m.innerHTML += `<p>dirija com segurança ;D</p>`
+
+aula 12 
+condições simples (if), condições compostas (if..else), condições aninhadas (if..elseif..else) e condições múltiplas (switch..case)
