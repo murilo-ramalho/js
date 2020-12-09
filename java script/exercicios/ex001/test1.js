@@ -1,12 +1,7 @@
-var dia = new Date()
-var hora = dia.getHours()
-var hora = 9
-var mudar = document.querySelector(div.hm)
-if (hora<12) {
-    Fundo.background = '#1a7aa0'
-    
-} else if (hora<18) {
-    Fundo.background = '#8f1b38'
-} else {
-    Fundo.background = '#341786'
+function carregar() {
+    var msg = window.document.querySelector(div.msg)
+    var imagem = window.document.querySelector(img.i)
+    var data = new Date()
+    var hora = data.getHours()
+    msg.innerHTML = `Agora são ${hora} horas`
 }

@@ -1,7 +1,9 @@
+/*modelo*/
 body {
     font: normal 20px Arial;
     color: white;
     background-color: cadetblue;
+    text-align: center;
 }
 .t {
     text-align: center;
@@ -9,14 +11,10 @@ body {
 .p {
     background-color: blueviolet;
     color: black;
-    text-align: center;
     width: 400px;
     margin: auto;
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
-}
-.a {
-    background-color: #1a7aa0;
 }
