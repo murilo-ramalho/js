@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+}
+.p {
+    background-color: blueviolet;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}

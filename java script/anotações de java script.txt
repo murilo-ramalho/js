@@ -132,4 +132,37 @@ m.innerHTML = `<p>sua idade é <strong>${print}</strong>, você pode digirir<p>`
 m.innerHTML += `<p>dirija com segurança ;D</p>`
 
 aula 12 
-condições simples (if), condições compostas (if..else), condições aninhadas (if..elseif..else) e condições múltiplas (switch..case)
+condições simples (if)
+    if (comparação) {}
+condições compostas (if..else)
+    if (comparação) {}
+condições aninhadas (if..elseif..else)  
+    if (comparação) {} else if () {} else {}
+condições múltiplas (switch..case)
+    switch (expreção) {
+        case #:
+            {}
+            break
+        case #:
+            {}
+            break
+        case #:
+            {}
+            break
+        dafault:
+            {}
+            break (opcional)
+    }
+
+em js os dias da semana são número
+1=dominago...6=sábado
+
+para pegar a data atual 
+    var agr = new Date()
+para pegar a hora atual 
+    var agr = new Date()
+    var hora = agr.getHours()
+para pegar o dia atual da semana
+    var agr = new Date()
+    var dias = agr.getDay()
+
