@@ -2,7 +2,7 @@
 body {
     font: normal 20px Arial;
     color: white;
-    background-color: cadetblue;
+    background-color: darkcyan;
     text-align: center;
 }
 .t {
@@ -11,10 +11,14 @@ body {
 .p {
     background-color: blueviolet;
     color: black;
-    width: 400px;
+    width: 300px;
     margin: auto;
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+h1 {
+    text-shadow: 1px 1px 10px black; 
+    color: rgb(212, 212, 212);
 }
