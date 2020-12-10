@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catpimba</title>
+    <title>catapimba</title>
     <link rel="stylesheet" href="../sty.css">
 </head>
 <body>
@@ -12,16 +12,23 @@
     </header>
     <section class="p">
         <div>
-            <p>digite sua idade</p>
-            <input type="number" min="1" max="150" id="idade">
-            <p>escolha sua biologia</p>
-            <input type="radio" value="masculino"> masculino
-            <input type="radio" value="feminino"> feminino
-        </div>
-        <div>
-            <img src="" alt="">
+            <p>ano de nacimento
+                <input type="number" min="1" id="nas">
+            </p>
+            <p>sexo
+                <input type="radio" name="sex" value="masculino" id="m" checked>
+                <label for="m">masculino</label>
+                <input type="radio" name="sex" value="feminino" id="f">
+                <label for="f">feminino</label>
+            </p>
+            <p>
+                <input type="button" value="verificar" onclick="v()">
+            </p>
+            <div id="mudar">
+                preencha o fromulario
+            </div>
         </div>
     </section>
-    <script src="test2.js"></script>
+    <script src="ex002.js"></script>
 </body>
 </html>
