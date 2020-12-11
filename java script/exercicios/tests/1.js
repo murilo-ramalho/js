@@ -1,12 +1,10 @@
 function verificar() {
-    var diaS = Number(document.querySelector('input#diaE'))
+    var diaS = document.getElementById('diaE')
     var vS = document.getElementById('vE')
     var mS = document.getElementById('mE')
     var data = new Date()
     var diaDaS = data.getDay()
-    mS.innerHTML = 'oi'
-    /*
-    switch(diaS) {
+    switch(diaS.Value) {
         case 0:
             window.alert('preencha o campo corretamente')
             break
@@ -42,5 +40,4 @@ function verificar() {
             window.alert('preencha o campo correntamente')
             break
     } 
-    */
 }
