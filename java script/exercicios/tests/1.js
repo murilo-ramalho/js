@@ -4,6 +4,8 @@ function verificar() {
     var mS = document.getElementById('mE')
     var data = new Date()
     var diaDaS = data.getDay()
+    mS.innerHTML = 'oi'
+    /*
     switch(diaS) {
         case 0:
             window.alert('preencha o campo corretamente')
@@ -39,6 +41,6 @@ function verificar() {
         default:
             window.alert('preencha o campo correntamente')
             break
-
-    }
+    } 
+    */
 }
