@@ -2,11 +2,13 @@
 body {
     font: normal 20px Arial;
     color: white;
-    background-color: darkcyan;
+    background-color: rgb(0, 70, 70);
     text-align: center;
 }
 .t {
     text-align: center;
+    text-shadow: 1px 1px 10px black; 
+    color: rgb(212, 212, 212);
 }
 .p {
     background-color: blueviolet;
@@ -17,8 +19,4 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
-}
-h1 {
-    text-shadow: 1px 1px 10px black; 
-    color: rgb(212, 212, 212);
 }
