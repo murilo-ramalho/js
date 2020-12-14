@@ -9,6 +9,7 @@ body {
     text-align: center;
     text-shadow: 1px 1px 10px black; 
     color: rgb(212, 212, 212);
+    margin-bottom: 30px;
 }
 .p {
     background-color: blueviolet;

@@ -85,7 +85,7 @@ só tem resultado em true ou false
 ordem de precedencia
 (),**,/
 <,>,>=
-!,%%,||
+!,&&,||
 
 ternario ?,:
 #?true:false
