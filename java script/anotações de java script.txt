@@ -155,7 +155,7 @@ condições múltiplas (switch..case)
     }
 
 em js os dias da semana são número
-1=dominago...6=sábado
+1=domingo...6=sábado
 
 para pegar a data atual 
     var agr = new Date()
