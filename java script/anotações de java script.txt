@@ -166,4 +166,5 @@ para pegar o dia atual da semana
     var agr = new Date()
     var dias = agr.getDay()
 
-.value é para o valor(.value.length conta quantos casas tem)
+.value é para o valor  #É COM v MINÚSCULO SENÃO NÃO LÊ O INPUT 
+.value.length conta quantos casas tem
