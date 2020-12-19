@@ -171,3 +171,6 @@ para pegar o dia atual da semana
 
 para saber se um valor tem número depois do ponto flutuante usa-se
 Number.isInteger(#)
+
+para criar elementos no html com o js usa-se
+#.document.createElement('#')

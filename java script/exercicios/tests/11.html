@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catapimba</title>
+    <link rel="stylesheet" href="../sty.css">
+</head>
+<body>
+    <header class="t">
+        <h1>Esse script foi feito para calcular a área de algumas figuras geometricas</h1>
+    </header>
+    <article class="p" style="width: auto;">
+        <!--parte da escolha-->
+        <p> escolha a figura:
+            <!--quadrado [0]-->
+            <input type="radio" name="fg" id="qE" value="quadrado" checked>
+            <label for="qE">quadrado</label>
+            <!--retangulo [1]-->
+            <input type="radio" name="fg" id="rE" value="retanglo">
+            <label for="rE">retângulo</label>
+            <!--triangulo [2]-->
+            <input type="radio" name="fg" id="tE" value="triangulo">
+            <label for="tE">triângulo</label>
+            <!--paralelograma [3]-->
+            <input type="radio" name="fg" id="pE" value="paralelograma">
+            <label for="pE">paralelograma</label>
+            <!--trapézio [4]-->
+            <input type="radio" name="fg" id="tE" value="trapezio">
+            <label for="tE">trapézio</label>
+            <!--círculo [5]-->
+            <input type="radio" name="fg" id="cE" value="circulo">
+            <label for="cE">círculo</label>
+            <!--botão [6]-->
+            <input type="button" value="escolher" onclick="magica1">
+        </p>
+        <!--parte da conta-->
+        <p id="conta">
+
+        </p>
+        <!--saida-->
+        <p id="E"> 
+
+        </p>
+    </article>
+    <script src="11.js"></script>
+</body>
+</html>
