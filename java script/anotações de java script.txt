@@ -168,3 +168,6 @@ para pegar o dia atual da semana
 
 .value é para o valor  #É COM v MINÚSCULO SENÃO NÃO LÊ O INPUT 
 .value.length conta quantos casas tem
+
+para saber se um valor tem número depois do ponto flutuante usa-se
+Number.isInteger(#)
