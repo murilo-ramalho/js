@@ -1,8 +1,12 @@
 function magica1() {
-    var fg = document.getElementsByClassName('fg')
+    var f = document.getElementsByName('fg')
     var conta = document.getElementById('conta')
     var S = document.getElementById('E')
-    if (rsex[6].checked) {
+    let conta = document.createElement('input')
+    conta.id = 'r'
+    conta.type = 'number'
+    conta.appendChild(conta)
+    if (f[5].checked) {
         
     }
 }
