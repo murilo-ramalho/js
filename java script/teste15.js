@@ -1,3 +1,4 @@
+//estrutura de repetição while e do-while
 var c = 1
 while (c<=10) {
     console.log('oi')

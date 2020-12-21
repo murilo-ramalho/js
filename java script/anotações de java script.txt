@@ -180,3 +180,11 @@ while (#) { }
 
 o laço de repetição do-while tem essa estrutura (o laço do-while faz o codigo 1 vez e dps verifica a condição)
 do { } while(#)
+
+o laço for tem essa estrutura 
+for (inicio;teste;incremento){
+    bloco-de-codigo
+} 
+inicio e algo q ocorre antes do laço 
+teste é o teste de condição
+o incremento é no final e no inicio novamente
