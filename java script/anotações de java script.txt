@@ -174,3 +174,9 @@ Number.isInteger(#)
 
 para criar elementos no html com o js usa-se
 #.document.createElement('#')
+
+o laço de repetição while tem essa estrutura 
+while (#) { } 
+
+o laço de repetição do-while tem essa estrutura (o laço do-while faz o codigo 1 vez e dps verifica a condição)
+do { } while(#)
