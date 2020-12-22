@@ -9,7 +9,7 @@ function magica() {
 }
 function entra() {
     var t = document.querySelector('h1')
-    t.innerHTML = "bom dia"
+    t.innerHTML = "ps: deu errado"
 }
 function saiu() {
     var t = document.querySelector('h1')
