@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catapimba</title>
+    <link rel="stylesheet" href="../sty.css">
+</head>
+<body>
+    <header class="t" onmouseenter='entro()' onmouseout='saiu()' id="oi">
+        <h1>
+            conversor de temperatura
+        </h1>
+    </header>
+    <article class="p">
+        <div style="background-color: rgb(122, 38, 201); border-radius: 5px;">
+            <p><strong>de:</strong>
+            <input type="radio" name="temp" id="gc" checked>
+            <label for="gc">Celsius</label>
+            <input type="radio" name="temp" id="f">
+            <label for="f">Farenheit</label>
+            <input type="radio" name="temp" id="k">
+            <label for="k">Kelvin</label></p>
+        </div>
+        <div style="background-color: rgb(122, 38, 201);">
+            <p><strong>para:</strong>
+            <input type="radio" name="temp2" id="gc2">
+            <label for="gc2">Celsius</label>
+            <input type="radio" name="temp2" id="f2" checked>
+            <label for="f2">Fahrenheit</label>
+            <input type="radio" name="temp2" id="k2">
+            <label for="k2">Kelvin</label></p>
+        </div>
+        <p>digite a temperatura:
+            <input type="number" name="vt" id="tE" max="2000000" min="-2000000">
+            <input type="button" value="verificar" onclick="magica()">
+        </p>
+        <div id="E">
+
+        </div>
+    </article>
+    <script src="13.js"></script>
+</body>
+</html>
