@@ -188,3 +188,7 @@ for (inicio;teste;incremento){
 inicio e algo q ocorre antes do laço 
 teste é o teste de condição
 o incremento é no final e no inicio novamente
+
+onclick é ativado quando o se clica no elemento escolhido
+onmouseentrer é ativado quando se passa o mouse por cima do elemento escolhido
+onmouseout é ativado quando se passa o mouse por baixo do elemento escolhido
