@@ -9,7 +9,19 @@ function magica() {
 }
 function entra() {
     var t = document.querySelector('h1')
-    t.innerHTML = "bom dia"
+    var data = new Date()
+    var hora = data.getHours()
+    //manha
+    if (hora<12 && hora>-1) {
+        t.innerHTML = "bom dia"
+    //tarde
+    } else if (hora>12 && hora<18) {
+        t.innerHTML = "boa tarde"
+    //noite
+    } else {
+        t.innerHTML = "boa noite"
+    }
+    
 }
 function saiu() {
     var t = document.querySelector('h1')
