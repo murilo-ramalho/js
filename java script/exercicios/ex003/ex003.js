@@ -18,6 +18,3 @@ function magica() {
         }
     }
 }
-function uau() {
-    document.location.reload()
-}
