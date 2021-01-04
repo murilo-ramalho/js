@@ -13,6 +13,7 @@ aula2 usando node.js
 
 para aderir valores a variavel é o codigo
 var # = #
+usa-se let # para variaveis de dentro da function
 varialveis sempre  começam com letra, $, _pode ter simbolos e n pode conter espaço e palavras já utilizadas na linguagem, letras maiusculas fazer diferença
 qual quer numero conta como numero
 str pode usar "", '', ``
