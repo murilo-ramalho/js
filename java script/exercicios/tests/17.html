@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catapimba</title>
+    <title>jogo da cobrinha</title>
     <link rel="stylesheet" href="../sty.css">
 </head>
 <body>
-    <div>
-        <header>
-            <h1>
-
-            </h1>
-        </header>
-        <article>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-        </article>
-    </div>
-    <script src="17.js"></script>
-    <script src="r.js"></script>
+    <canvas id="stage" width="400" height="400"></canvas>
+    <script type="text/javascript">
+        window.onload = function() {
+            var stage = document.getElementById('stage');
+            var ctx = stage.getContext("2d")
+            ctx.fillStyle = "black"
+            ctx.fillRect(0, 0, stage.width, stage.height)
+        }
+    </script>
 </body>
 </html>
