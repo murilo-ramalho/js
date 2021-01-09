@@ -11,13 +11,13 @@ function isN(n) {
     }
 } 
 
-function inL(n, l) {
+/*function inL(n, l) {
     if(l.indexOf(n) != -1) {
         return true
     } else {
         return false
     }
-}
+}*/
 
 
 function adicionar() {
