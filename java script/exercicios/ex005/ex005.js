@@ -1,16 +1,29 @@
-var s = document.getElementById('E')
-var nuns = document.getElementById('amosN')
-function magica1() {
-    let n = Number(document.getElementById('nsE').value)
-    if (n<0 || n>100 || n.length == 0) {
-        window.alert('preencha corretamente') 
+let n = Number(document.getElementById('nsE').value)
+let lista = document.getElementById('amosN')
+let S = document.getElementById('E')
+let vetor = []
+
+function isN(n) {
+    if (n>=1 && n<=100) {
+        return true
     } else {
-        a
-    }    
+        return false
+    }
+} 
+
+function inL(n, l) {
+    if(l.indexOf(n) != -1) {
+        return true
+    } else {
+        return false
+    }
 }
 
 
-var ax = function auxiliar(x) {
-    nuns.createElement('p')
-    
+function adicionar() {
+    if(isN(n) && Intl(n, vetor)) {
+
+    } else {
+        window.alert('valor invalido ou já existente')
+    }
 }
