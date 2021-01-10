@@ -205,3 +205,16 @@ pode usar
 
 para usar repetição com variaveis compostas usa-se
 for(# in #) { }
+
+estudar mais de 
+function
+objetos
+modularização
+expreções regulres
+json
+ajax
+nodejs
+
+
+objetos pode nomar os espaços diferente do aray, tb pode colocar uma funciona dentro do objeto
+this se refere ao objeto
