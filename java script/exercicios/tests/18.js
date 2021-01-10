@@ -4,7 +4,7 @@ function adicionar() {
     let S = document.getElementById('E')
     let vetor = []
     if (n>=1 && n<=100) {
-        addN.innerHTML = ''
+        addN.
     } else {
         window.alert('deu errado')
     }
