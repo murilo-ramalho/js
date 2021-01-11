@@ -37,9 +37,10 @@ bloco = {
         this.velocidade += this.gravidade;
         this.y += this.velocidade;
 
-        if (this.y > chao.y - this.altura) {
+        if (this.y > chao.y - this.altura && estadoAtual != estados.perdeu) {
             this.y = chao.y - this.altura;
             this.qntPulos = 0;
+            this.velocidade = 0;
         }
     },  
     pula: function(){
@@ -111,10 +112,14 @@ obstaculos = {
 function clique(event){
     if (estadoAtual == estados.jogando) {
         bloco.pula();
-    } else if (estadoAtual == estados.jogar) {
+    } 
+    else if (estadoAtual == estados.jogar) {
         estadoAtual = estados.jogando;
-    } else if (estadoAtual == estados.perdeu) {
+    } 
+    else if (estadoAtual == estados.perdeu && bloco.y >= 2*ALTURA) {
         estadoAtual = estados.jogar;
+        bloco.velocidade = 0;
+        bloco.y = 0;
     }
 }
 
