@@ -1,5 +1,5 @@
 //variaveis
-var canvas, ctx, altura, largura, frames = 0, maxP = 3
+var canvas, ctx, altura, largura, frames = 0, maxP = 3,
 
 chao = {
     y: 550,
@@ -25,11 +25,11 @@ bloco = {
         this.velocidade += this.gravidade;
         this.y += this.velocidade
         if(this.y > chao.y - this.altura) {
+
             this.y = chao.y - this.altura;
             this.quantP = 0;
         }
     },
-
     pula: function() {
         if (this.quantP< maxP) {
             this.velocidade = -this.fcdp;
@@ -38,20 +38,37 @@ bloco = {
     },
     desenha:function() {
         ctx.fillStyle = this.cor;
-        ctx.fillRect(this.x, this.y, this.largura, this.altura)
+        ctx.fillRect(this.x, this.y, this.altura, this.largura);
+    }
+},
+
+obstaculos = {
+    _obs: [],
+    cores: ["#ffbc1c","#ff1c1c","#ff85e1","#52a7ff","#78ff5d"],
+
+    insere: function() {
+        this._obs.push({
+            x: 200,
+            largura: 30+Math.floor(21*Math.random()),
+            altura: 30 + Math.floor(120*Math.random()),
+            cor: this.cores[Math.floor(5*Math.random())]
+        });
+    },
+    atualiza: function () {
+
+    },
+    desenha: function() {
+        for(var i = 0, tam = this._obs.lengh; i < tam; i++) {
+            var obs = this._obs[i];
+            ctx.fillStyle = obs.cor;
+            ctx.fillRect(obs.x, chao.y-obs.altura, obs.largura, obs.altura);
+        }
     }
 };
 
+
 function clique(event) {
     bloco.pula();
-}
-
-function roda() {
-    atualiza();
-    desenho();
-
-
-    window.requestAnimationFrame(roda);
 }
 
 function main() {
@@ -77,19 +94,29 @@ function main() {
 
 }
 
+function roda() {
+    atualiza();
+    desenha();
+
+
+    window.requestAnimationFrame(roda);
+}
+
+
 function atualiza() {
     frames++;
     bloco.atualiza();
     
 }
 
-function desenho() {
+function desenha() {
     ctx.fillStyle = "#50beff"
     ctx.fillRect(0,0,largura, altura)
 
     chao.desenha();
+    obstaculos.desenha();
     bloco.desenha();
 }
 
 //começa o jg
-main()
+main();

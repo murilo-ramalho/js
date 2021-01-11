@@ -199,6 +199,7 @@ usa-se document.location.reload() para recaregar a pagina
 com vetores usa-se [] para guardar varios valores
 pode usar 
 #[chave] = valor ou #.push(valor)
+para remover um itm de um vetor se usa #.slpice(chave,chave)
 #.length mostra quantos elementos tem 
 #.sort() arruma de forma cresente
 #.indexOf(valor) procura o valor dentro do vetor
@@ -218,3 +219,7 @@ nodejs
 
 objetos pode nomar os espaços diferente do aray, tb pode colocar uma funciona dentro do objeto
 this se refere ao objeto
+
+
+math.random() cria um número aleatorio entre 0 e 1
+math.floor(# = math.random()) cria um número aleatorio entre 0 e o #
