@@ -45,8 +45,8 @@ window.onload = function() {
             }
         }
         trial.push({x:px,y:py})
-        while(trial.length> tail) {
-            trial.shift();
+            while(trial.length> tail) {
+                trial.shift();
         }
         if (ax == px && ay == py ) {
             tail++;
