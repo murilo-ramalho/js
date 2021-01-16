@@ -1,12 +1,12 @@
 //variávies do jogo
-var canvas, ctx, ALTURA, LARGURA, frames = 0, maxPulos = 3, velocidade = 6, estadoAtual, record,
+var canvas, ctx, ALTURA, LARGURA, frames = 0, maxPulos = 3, velocidade = 6, estadoAtual, record, img
 
 //estagios do jogo
 estados = {
     jogar: 0,
     jogando: 1,
-    perdeu: 2, 
-},
+    perdeu: 2 
+};
 
 //chão
 chao = {
@@ -25,8 +25,8 @@ chao = {
 bloco = {
     x: 50,
     y: 0,
-    altura: 50,
-    largura: 50,
+    altura: spriteB.altura,
+    largura: spriteB.largura,
     cor: "#ff4e4e",
     gravidade: 1.6,
     velocidade: 0,
@@ -62,8 +62,9 @@ bloco = {
         this.score = 0;
     },
     desenha: function(){
-        ctx.fillStyle = this.cor;
-        ctx.fillRect(this.x, this.y, this.altura,this.largura);
+       /* ctx.fillStyle = this.cor;
+        ctx.fillRect(this.x, this.y, this.altura,this.largura);*/
+        spriteB.desenha(this.x, this.y);
     },
 };
 
@@ -83,7 +84,7 @@ obstaculos = {
             cor: this.cores[Math.floor(5 * Math.random())]
         });
 
-        this.tempoInsere = 40 + Math.floor(21 * Math.random());
+        this.tempoInsere = 50 + Math.floor(21 * Math.random());
     },
     atualiza: function(){
         if (this.tempoInsere == 0) {
@@ -168,6 +169,9 @@ function main() {
         record = 0;
     }
 
+    img = new Image();
+    img.src = "18 imgs.png";
+
     roda();
 
 }
@@ -189,8 +193,10 @@ function atualiza(){
 }
 
 function desenha(){
-    ctx.fillStyle = "#50beff";  
-    ctx.fillRect(0,0,LARGURA,ALTURA);
+    //era o fundo azul
+    /*ctx.fillStyle = "#50beff";  
+    ctx.fillRect(0,0,LARGURA,ALTURA);*/
+    bg.desenha(0,0);
 
     ctx.fillStyle = '#fff';
     ctx.font = '50px Arial';
