@@ -1,5 +1,5 @@
 //variávies do jogo
-var canvas, ctx, ALTURA, LARGURA, frames = 0, maxPulos = 3, velocidade = 6, estadoAtual, record, img
+var canvas, ctx, ALTURA, LARGURA, /*frames = 0,*/ maxPulos = 3, velocidade = 6, estadoAtual, record, img
 
 //estagios do jogo
 estados = {
@@ -11,12 +11,25 @@ estados = {
 //chão
 chao = {
     y: 550,
+    x: 0,
     altura: 50,
-    cor: "#ffdf70",
+    //cor: "#ffdf70",
+
+    atualiza: function() {
+        this.x -= velocidade;
+        if (this.x <= -30) {
+            this.x = 0;
+        }
+    },
 
     desenha: function(){
-        ctx.fillStyle = this.cor;
-        ctx.fillRect(0, this.y, LARGURA, this.altura);
+        spriteChao.desenha(this.x, this.y);
+        spriteChao.desenha(this.x+spriteChao.largura, this.y);
+
+
+
+        /*ctx.fillStyle = this.cor;
+        ctx.fillRect(0, this.y, LARGURA, this.altura);*/
     }
 };
 
@@ -27,16 +40,17 @@ bloco = {
     y: 0,
     altura: spriteB.altura,
     largura: spriteB.largura,
-    cor: "#ff4e4e",
+    //cor: "#ff4e4e",
     gravidade: 1.6,
     velocidade: 0,
     forcaDoPulo: 25,
     qntPulos: 0,
     score: 0,
-
+    rotacao: 0,
     atualiza: function() {
         this.velocidade += this.gravidade;
         this.y += this.velocidade;
+        this.rotacao += Math.PI/180 * velocidade;
 
         if (this.y > chao.y - this.altura && estadoAtual != estados.perdeu) {
             this.y = chao.y - this.altura;
@@ -64,7 +78,14 @@ bloco = {
     desenha: function(){
        /* ctx.fillStyle = this.cor;
         ctx.fillRect(this.x, this.y, this.altura,this.largura);*/
-        spriteB.desenha(this.x, this.y);
+        //spriteB.desenha(this.x, this.y);
+        ctx.save();
+        ctx.translate(this.x + this.largura/2, this.y + this.altura/2);
+        ctx.rotate(this.rotacao);
+        spriteB.desenha(-this.largura/2,-this.altura/2);
+        ctx.restore();
+
+
     },
 };
 
@@ -184,11 +205,15 @@ function roda(){
 }
 
 function atualiza(){
-    frames++;
+    //frames++;
     bloco.atualiza();
     if (estadoAtual == estados.jogando) { 
         obstaculos.atualiza(); 
     }
+    chao.atualiza();
+    
+    //por algum motio ele fica mt rapido com isso
+    //bloco.atualiza();
 
 }
 
