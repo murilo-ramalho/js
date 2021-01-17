@@ -1,5 +1,5 @@
 //variávies do jogo
-var canvas, ctx, ALTURA, LARGURA, /*frames = 0,*/ maxPulos = 3, velocidade = 6, estadoAtual, record, img
+var canvas, ctx, ALTURA, LARGURA, /*frames = 0,*/ maxPulos = 3, velocidade = 10, estadoAtual, record, img
 
 //estagios do jogo
 estados = {
@@ -182,6 +182,7 @@ function main() {
     // quando clica na tela chama a função CLIQUE
     document.addEventListener("mousedown", clique);
     document.addEventListener("keydown", clique);
+    //document.addEventListener("touch", clique);
 
     estadoAtual = estados.jogar;
     record = localStorage.getItem("record");
