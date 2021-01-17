@@ -43,7 +43,7 @@ bloco = {
     //cor: "#ff4e4e",
     gravidade: 1.6,
     velocidade: 0,
-    forcaDoPulo: 25,
+    forcaDoPulo: 23,
     qntPulos: 0,
     score: 0,
     rotacao: 0,
@@ -105,7 +105,7 @@ obstaculos = {
             cor: this.cores[Math.floor(5 * Math.random())]
         });
 
-        this.tempoInsere = 50 + Math.floor(21 * Math.random());
+        this.tempoInsere = 45 + Math.floor(21 * Math.random());
     },
     atualiza: function(){
         if (this.tempoInsere == 0) {
@@ -183,15 +183,15 @@ function main() {
     document.addEventListener("mousedown", clique);
     document.addEventListener("keydown", clique);
 
-    estadoAtual = estados.jogar
+    estadoAtual = estados.jogar;
     record = localStorage.getItem("record");
 
     if (record == null) {
         record = 0;
-    }
+    };
 
     img = new Image();
-    img.src = "18 imgs.png";
+    img.src = "18 imgs2.png";
 
     roda();
 
@@ -243,7 +243,7 @@ function desenha(){
             ctx.fillText("Novo Record!", -150, -65);
         } 
         else if (record<10) {
-            ctx.fillText(`record${record}`, -99,-65);
+            ctx.fillText(record, -99,-65);
         }
         else if (record>= 10 && record < 100) {
             ctx.fillText("record"+record, -112, -65);
