@@ -240,7 +240,11 @@ function desenha(){
     };
 
     if (estadoAtual==estados.perdeu) {
-        perdeu.desenha(LARGURA/2-perdeu.largura/2, ALTURA/2-perdeu.altura/2 - spriteRecord.altura);
+        perdeu.desenha(LARGURA/2-perdeu.largura/2, ALTURA/2-perdeu.altura/2 - spriteRecord.altura/2);
+        perdeu.desenha(LARGURA / 2 - perdeu.largura / 2, ALTURA / 2 - perdeu.altura / 2 - spriteRecord.altura / 2);
+
+        spriteRecord.desenha(LARGURA/2-spriteRecord.largura/2, ALTURA/2+perdeu.altura/2-spriteRecord.altura/2-25);
+        spriteRecord.desenha(LARGURA / 2 - spriteRecord.largura / 2, ALTURA / 2 + perdeu.altura / 2 - spriteRecord.altura / 2 - 25);
     }
     /*if (estadoAtual == estados.jogar) {
         ctx.fillStyle = 'green';
