@@ -105,7 +105,7 @@ obstaculos = {
             cor: this.cores[Math.floor(5 * Math.random())]
         });
 
-        this.tempoInsere = 45 + Math.floor(21 * Math.random());
+        this.tempoInsere = 40 + Math.floor(21 * Math.random());
     },
     atualiza: function(){
         if (this.tempoInsere == 0) {
@@ -228,7 +228,21 @@ function desenha(){
     ctx.font = '50px Arial';
     ctx.fillText(bloco.score, 30, 68);
 
+    if (estadoAtual == estados.jogando) {
+        obstaculos.desenha(); 
+    };
+
+    chao.desenha();
+    bloco.desenha(); 
+
     if (estadoAtual == estados.jogar) {
+        jogar.desenha(LARGURA/2- jogar.largura/2, ALTURA/2- jogar.altura/2)
+    };
+
+    if (estadoAtual==estados.perdeu) {
+        perdeu.desenha(LARGURA/2-perdeu.largura/2, ALTURA/2-perdeu.altura/2 - spriteRecord.altura);
+    }
+    /*if (estadoAtual == estados.jogar) {
         ctx.fillStyle = 'green';
         ctx.fillRect(LARGURA/2-50, ALTURA/2-50, 100, 100);
     } 
@@ -264,13 +278,8 @@ function desenha(){
         }
 
         ctx.restore();
-    }
-    else if (estadoAtual == estados.jogando) {
-        obstaculos.desenha(); 
-    }
+    }*/
 
-    chao.desenha();
-    bloco.desenha(); 
 }
 
 
