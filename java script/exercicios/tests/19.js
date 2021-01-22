@@ -1,54 +1,39 @@
-function iniciar() {
-    //variaveis feita para jogos
-        //cena
-    var scene = new THREE.Scene();
-        //altura da tela
-    var WIDTH = window.innerWidth; 
-        //largura da tela
-    var HEIGHT = window.innerHeight; 
-        //pocição e visão da camera
-    var camera = new THREE.PerspectiveCamera(75, 1, 1, 50);
-        //rederizção do espaço
-    var renderer = new THREE.WebGLRenderer({antilias:true});
+var scene, camera, renderer;
+var geometry, material, mesh;
 
-    //posição da camera
-    camera.position.z = 300;
+function Executar() {
+  
+    scene = new THREE.Scene();
 
-    //renderização da cena
-    renderer.setSize(500, 500);
-    var show = document.querySelector('div');
-    show.appendChild(renderer.domElement);
+    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+    camera.position.z = 400;
 
-    //cor de fundo
+    geometry = new THREE.BoxGeometry(100, 100, 100);
+    material = new THREE.MeshBasicMaterial({  color: 0xD1A963, wireframe: true });
+
+    mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
+    renderer = new THREE.WebGLRenderer({antialias:true});
     renderer.setClearColor(0x1F5A94);
-    
-    //objeto 3d
-    var geometry = new THREE.BoxGeometry(200,200,200);
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
-    //material do objeto
-    var material = new THREE.MeshBasicMaterial({color:0xC9C097, wireframe: true});
+    var show = document.querySelector('div');
+   
+    show.appendChild(renderer.domElement);
+ 
+    function animate() {
 
-    //cubo
-    var cubo = new THREE.Mesh(geometry, material);
+        requestAnimationFrame(animate);
 
-    //adicionando o cubo na jogo
-    scene.add(cubo);
+        mesh.rotation.x += 0.01;
+        mesh.rotation.y += 0.01;
+        //mesh.rotation.z += 0.01;
 
-    //renderizando a camera com o jg
-    renderer.render(scene, camera);
+        renderer.render(scene, camera);
 
-    //renderizamento do jg
-    function render() {
-        renderer.render(scene,camera);
-
-        //movimentação do cubo
-        cubo.rotation.z += 0.01;
-        cubo.rotation.y += 0.01;
-        cubo.rotation.x += 0.01;
-
-        requestAnimationFrame(render);
     }
-
-    //renderizando o jg
-    render();
+         animate();
 }
+
+window.onload = Executar;
