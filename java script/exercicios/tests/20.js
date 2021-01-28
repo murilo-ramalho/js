@@ -13,6 +13,12 @@ const material = new THREE.MeshBasicMaterial({color:0x00ff00});
 const cube = new THREE.Mesh(geometry,material);
 scene.add(cube);
 
+const geometria = new THREE.BoxGeometry(5000, 1, 2000);
+const materialchao = new THREE.MeshBasicMaterial({color:0x006400});
+const chao = new THREE.Mesh(geometria, materialchao);
+scene.add(chao);
+chao.position.y -= 2
+
 camera.position.z = 4;
 
 //loop de renderização, animação ou movimento
@@ -27,13 +33,13 @@ document.addEventListener("keydown", mover);
 function mover(event) {
         switch (event.keyCode) {
             case 37: //left 
-                camera.rotation.y -= 0.1;
+                camera.rotation.y += 0.1;
                 break;
             case 38: //up
                 camera.rotation.x += 0.1;
                 break;
             case 39: //right 
-                camera.rotation.y += 0.1;
+                camera.rotation.y -= 0.1;
                 break;
             case 40: //dowm
                 camera.rotation.x -= 0.1;
