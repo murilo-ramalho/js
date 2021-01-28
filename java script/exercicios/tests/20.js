@@ -13,11 +13,11 @@ const material = new THREE.MeshBasicMaterial({color:0x00ff00});
 const cube = new THREE.Mesh(geometry,material);
 scene.add(cube);
 
-const geometria = new THREE.BoxGeometry(5000, 1, 2000);
+const geometria = new THREE.BoxGeometry(50, 1, 20);
 const materialchao = new THREE.MeshBasicMaterial({color:0x006400});
 const chao = new THREE.Mesh(geometria, materialchao);
 scene.add(chao);
-chao.position.y -= 2
+chao.position.y -= 1.5;
 
 camera.position.z = 4;
 
